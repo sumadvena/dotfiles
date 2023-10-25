@@ -15,7 +15,7 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'Rosé Pine (Gogh)'
 config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
+--config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 -- config.window_background_opacity = 0.9
 config.window_background_image_hsb = { brightness = 0.03, }
