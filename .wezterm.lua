@@ -1,6 +1,8 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
+
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -11,15 +13,26 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
+--config.font = wezterm.font 'Intel One Mono'
+config.font = wezterm.font {
+    family = 'Iosevka Term',
+    stretch = 'Expanded',
+    weight = 'Regular',
+}
+
+config.font_size = 14
+
+config.font = wezterm.font_with_fallback {'Iosevka Term', 'Fira Code Nerd Font'}
+--config.font = wezterm.font_with_fallback { 'Monaspace Argon', 'Fira Code Nerd Font'}
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Rosé Pine (Gogh)'
 config.use_fancy_tab_bar = true
 --config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
--- config.window_background_opacity = 0.9
-config.window_background_image_hsb = { brightness = 0.03, }
-config.window_background_image = "/home/matt/Obrazy/jakub-rozalski-1920-you-reap-what-you-sowih.jpg"
+config.window_background_opacity = 0.9
+--config.window_background_image_hsb = { brightness = 0.03, }
+--config.window_background_image = "/home/matt/Obrazy/jakub-rozalski-1920-you-reap-what-you-sowih.jpg"
 
 -- and finally, return the configuration to wezterm
 return config
