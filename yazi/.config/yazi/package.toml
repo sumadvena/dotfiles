@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "Reledia/glow", rev = "4e016fa" }, { use = "Reledia/miller", rev = "40e0265" }, { use = "Reledia/hexyl", rev = "f845ea5" }, { use = "Ape/mediainfo", rev = "c69314e" }, { use = "ndtoan96/ouch", rev = "251da69" }, { use = "AnirudhG07/rich-preview", rev = "9bcf154" }, { use = "dedukun/relative-motions", rev = "73f5542" }, { use = "pirafrank/what-size", rev = "f08f7f2" }, { use = "yazi-rs/plugins:max-preview", rev = "9a1129c" }]
+
+[flavor]
+deps = []
