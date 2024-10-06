@@ -1,0 +1,80 @@
+@import "gruvbox.css";
+
+* {
+	font-size: 13px;
+	font-family: Monaspace Argon;
+}
+
+window#waybar {
+	background: @base;
+	color: @text;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: @base_hard;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: @base;
+	background: @base_hard;
+}
+
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk,
+#tray {
+	background: @base_hard;
+}
+
+#window {
+  padding: 0 7px;
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: @text;
+}
+#workspaces button.active {
+	color: @blue;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+#workspaces button:hover {
+	background: @base_hard;
+	border: @base_hard;
+	padding: 0 3px;
+}
+
+#pulseaudio {
+	color: @text;
+}
+#memory {
+	color: #2aa198;
+}
+#cpu {
+	color: #6c71c4;
+}
+#battery {
+	color: @text;
+}
+#disk {
+	color: #b58900;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+	padding: 0 10px;
+}

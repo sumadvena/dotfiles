@@ -1,5 +1,6 @@
 require("matt.lazyplugin")
 
+vim.g.maplocalleader = ";"
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.nu = true

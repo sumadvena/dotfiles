@@ -1,9 +1,9 @@
 {
   "position": "top",
   "margin-bottom": 0,
-  "margin-top": 5,
-  "margin-left": 10,
-  "margin-right": 10,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
   "spacing": 7,
   "height": 28,
 
@@ -27,11 +27,11 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{id}",
+    "format": "{icon}",
     "on-click": "activate",
-    // "format-icons": {
-    //   "active": " ",
-    // },
+    "format-icons": {
+      "active": " ",
+    },
     "sort-by-number": true,
   },
 

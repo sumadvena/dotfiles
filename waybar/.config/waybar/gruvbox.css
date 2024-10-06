@@ -1,7 +1,7 @@
 @define-color red #cc241d;
 @define-color yellow #d79921;
 @define-color aqua #689d6a;
-@define-color blue #89b4fa;
+@define-color blue #83a698;
 @define-color lavender #b4befe;
 @define-color text #ebdbb2;
 @define-color subtext1 #bac2de;
@@ -13,5 +13,5 @@
 @define-color surface1 #45475a;
 @define-color surface0 #313244;
 @define-color base #282828;
-@define-color mantle #181825;
+@define-color base_hard #1d2021;
 @define-color crust #11111b;
