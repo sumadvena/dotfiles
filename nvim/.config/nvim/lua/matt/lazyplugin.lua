@@ -51,8 +51,7 @@ require("lazy").setup({
         above = "gcO",
         ---Add comment on the line below
         below = "gco",
-        ---Add comment at the end of line
-        eol = "gcA",
+        ---Add comment at the end of line eol = "gcA",
       },
       ---Enable keybindings
       ---NOTE: If given `false` then the plugin won't create any mappings
@@ -554,6 +553,13 @@ require("lazy").setup({
       },
     },
   },
+
+  ---------------------------------------- MICROPYTHON
+  {
+    "jim-at-jibba/micropython.nvim",
+    dependencies = { "akinsho/toggleterm.nvim" },
+  },
+
 
   {
     'nvim-lualine/lualine.nvim',

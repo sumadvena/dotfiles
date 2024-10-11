@@ -55,6 +55,9 @@ vim.keymap.set("n", "<leader>ft", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
 
+-- micropython 
+vim.keymap.set("n", "<leader>mr", require("micropython_nvim").run)
+
 -- TELESCOPE MAYBE WILL WORK
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
