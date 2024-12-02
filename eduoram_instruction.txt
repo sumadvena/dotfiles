@@ -1,0 +1,21 @@
+configured with network manager with iwd only
+for Wroclaw University of Science and Technology
+
+1. create a eduroam.8021x file in /var/lib/iwd/
+2. copy and fill accordingly
+
+
+[Security]
+EAP-Method=TTLS
+EAP-Identity=anonymus@pwr.edu.pl
+EAP-TTLS-CACert=/var/lib/iwd/ca.pem 
+EAP-TTLS-ServerDomainMask=*.pwr.edu.pl
+EAP-TTLS-Phase2-Method=Tunneled-PAP
+EAP-TTLS-Phase2-Identity=ActiveDirectoryAccountName@pwr.edu.pl
+EAP-TTLS-Phase2-Password=ADpassword
+
+[Settings]
+AutoConnect=true
+
+3. generate certificate using official eduroam installer script
+4. ca.pem must be owned by root:root

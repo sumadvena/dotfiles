@@ -1,0 +1,94 @@
+@import "gruvbox.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CommitMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+tooltip {
+	background: @base;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: @text;
+	}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @base;
+    background-color: @aqua;
+    border-radius: 15px;
+}
+
+#workspaces button.focused {
+    color: @aqua;
+    background-color: @base;
+    border-radius: 15px;
+}
+
+#workspaces button.urgent {
+    color: @red;
+    background-color: @base;
+    border-radius: 15px;
+}
+
+#workspaces button:hover {
+	background-color: @aqua;
+	color: @base;
+	border-radius: 15px;
+}
+
+#custom-date, #clock, #battery, #pulseaudio, #network, #workspaces {
+	background-color: @base;
+	padding: 5px 10px;
+	margin: 5px 0px;
+}
+
+#workspaces {
+	background-color: @base;
+	border-radius: 15px 0px 0px 15px;
+}
+
+#custom-date {
+	color: @text;
+}
+
+#clock {
+    color: @text;
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 10px;
+}
+
+#battery {
+    color: @text;
+}
+
+#battery.charging {
+    color: @aqua;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @text;
+    color: @red;
+}
+
+#network {
+	color: @text;
+	border-radius: 0px 0px 0px 0px;
+}
+
+#pulseaudio {
+	color: @text;
+}
