@@ -1,13 +1,14 @@
-@import "gruvbox.css";
+/* @import "gruvbox.css"; */
+@import "flexoki-dark.css";
 
 * {
 	font-size: 13px;
-	font-family: Monaspace Argon;
+	font-family: CommitMono Nerd Font;
 }
 
 window#waybar {
-	background: @base;
-	color: @text;
+	background: @bg;
+	color: @fg;
 }
 
 #custom-right-arrow-dark,

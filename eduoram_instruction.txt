@@ -18,4 +18,4 @@ EAP-TTLS-Phase2-Password=ADpassword
 AutoConnect=true
 
 3. generate certificate using official eduroam installer script
-4. ca.pem must be owned by root:root
+4. ca.pem must be owned by root:root and now it's in the HOME/.config/cat_installer and in /var/lib/iwd dir

@@ -1,0 +1,15 @@
+font-family = "CommitMono Nerd Font Mono"
+font-size = 13
+cursor-style = block
+cursor-style-blink = false
+font-feature = calt
+
+theme = flexoki-dark
+window-decoration = false
+window-padding-x = 10,10
+window-padding-y = 10,10
+background-opacity = 0.93
+
+gtk-single-instance = true
+shell-integration = fish
+shell-integration-features = no-cursor

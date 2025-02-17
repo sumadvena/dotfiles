@@ -1,4 +1,4 @@
-@import "gruvbox.css";
+@import "flexoki-dark.css";
 
 * {
     border: none;
@@ -10,85 +10,84 @@
 
 window#waybar {
     background: transparent;
-    color: @text;
+    color: @tx;
 }
 
 tooltip {
-	background: @base;
+	background: @bg;
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: @text;
+	border-color: @tx;
 	}
 
 #workspaces button {
     padding: 5px 10px;
-    color: @text;
+    color: @tx;
 }
 
 #workspaces button.active {
-    color: @base;
-    background-color: @aqua;
+    color: @bg;
+    background-color: @bl;
     border-radius: 15px;
 }
 
 #workspaces button.focused {
-    color: @aqua;
-    background-color: @base;
+    color: @bl;
+    background-color: @bg;
     border-radius: 15px;
 }
 
 #workspaces button.urgent {
-    color: @red;
-    background-color: @base;
+    color: @re;
+    background-color: @bg;
     border-radius: 15px;
 }
 
 #workspaces button:hover {
-	background-color: @aqua;
-	color: @base;
+	background-color: @bl;
+	color: @bg;
 	border-radius: 15px;
 }
 
 #custom-date, #clock, #battery, #pulseaudio, #network, #workspaces {
-	background-color: @base;
+	background-color: @bg;
 	padding: 5px 10px;
 	margin: 5px 0px;
 }
 
 #workspaces {
-	background-color: @base;
+	background-color: @bg;
 	border-radius: 15px 0px 0px 15px;
 }
 
 #custom-date {
-	color: @text;
+	color: @tx;
 }
 
 #clock {
-    color: @text;
+    color: @tx;
     border-radius: 0px 15px 15px 0px;
     margin-right: 10px;
 }
 
 #battery {
-    color: @text;
+    color: @tx;
 }
 
 #battery.charging {
-    color: @aqua;
+    color: @gr;
 }
 
 #battery.warning:not(.charging) {
-    background-color: @text;
-    color: @red;
+    color: @re;
 }
 
 #network {
-	color: @text;
+	color: @tx;
 	border-radius: 0px 0px 0px 0px;
 }
 
 #pulseaudio {
-	color: @text;
+	color: @tx;
 }

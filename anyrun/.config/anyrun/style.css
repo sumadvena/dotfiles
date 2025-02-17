@@ -43,22 +43,22 @@
 
 
 #match:selected {
-  color: #282828;
-  background: #fbf1c7;
+  color: #100F0F;
+  background: #FFFCF0;
   border-radius: 7px;
 }
 
 #entry {
   border-radius: 7px;
-  margin: 3px;
+  margin: 4px;
   padding: 10px 5px;
-  caret-color: #ebdbb2;
-  font-size: 20px;
+  caret-color: #FFFCF0;
+  font-size: 24px;
   font-weight: 700;
 }
 
 list > #plugin {
-  border-top: 1px solid rgba(235, 219, 178, 0.3);
+  border-top: 1px solid rgba(206, 205, 195, 0.3);
   margin: 3px;
   padding-top: 3px;
   padding-left: 3px;
@@ -78,16 +78,16 @@ list > #plugin:hover {
 }
 
 box#main {
-  border-color: rgba(69, 133, 136, 1);    
-  color: #ebdbb2;
+  border-color: rgba(32, 94, 166, 0.9);
+  color: #FFFCF0;
   border-width: 4px;
   border-style: solid;
   margin-top: 15px;
-  background-color: rgba(40,40,40,0.7);
+  background-color: rgba(16, 15, 15, 0.8);
   border-radius: 7px;
   padding: 5px;
 }
 
 zlabel#plugin {
-  font-size:20px;
+  font-size:22px;
 }
