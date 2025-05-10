@@ -1,0 +1,9 @@
+clipse-bin
+easyeffects-bundy01-presets
+paru-bin
+paru-bin-debug
+ppds-meta
+pwvucontrol
+typstyle-bin
+udhcpc
+zig-bin
