@@ -12,3 +12,8 @@ set -Ux FZF_DEFAULT_OPTS '
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+# awrit
+set --export PATH /home/matt/.local/bin $PATH
+
+alias cd="z"
