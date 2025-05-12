@@ -25,7 +25,7 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
-      animate = { enabled = true, opts = { duration = 5, easing = 'linear', fps = 60 } },
+      animate = { enabled = true, opts = { duration = 1, easing = 'linear', fps = 60 } },
       bigfile = { enabled = true },
       dashboard = { enabled = true },
       -- explorer = { enabled = true },
