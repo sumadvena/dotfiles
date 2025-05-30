@@ -1,7 +1,8 @@
 set -gx EDITOR nvim
+set -gx MANPAGER "nvim +Man!"
 set -U fish_greeting
-zoxide init fish | source
 starship init fish | source
+zoxide init fish | source
 fish_config theme choose flexoki-dark
 set -Ux FZF_DEFAULT_OPTS '
 	--color=fg:#878580,bg:#100F0F,hl:#CECDC3

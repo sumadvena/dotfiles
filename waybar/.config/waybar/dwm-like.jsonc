@@ -1,0 +1,84 @@
+{
+	"layer": "top",	
+	"position": "top",
+    "height": 27,
+
+
+    "modules-left": ["river/tags", "river/mode", "river/window"],
+    "modules-center": [],
+    "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
+
+
+
+    "river/tags": {
+        "num-tags": 9,
+    },
+
+
+	"river/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+
+	// "custom/scratch": {
+	//   		"interval": 3,
+	//   		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 0)'",
+	//   		"format": "^{}", 
+	//   		"on-click": "swaymsg 'scratchpad show'",
+	//   		"on-click-right": "swaymsg 'move scratchpad'"
+// },
+
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+},
+
+
+    "clock": {
+        "format": "{:%a %b %e  %R}",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 30
+},
+
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+              "full": 99,
+              "good": 98,
+              "normal": 98,
+              "warning": 20,
+              "critical": 20
+		},
+
+        "format": "{icon}   {capacity}%",
+        "format-good": "{icon}   {capacity}%", 
+        "format-full": "   {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 120
+},
+
+
+"network": {
+	"format-wifi": "  {essid}",
+	"format-ethernet": "{essid}",
+	"format-linked": "{ifname} (No IP) ",
+	"format-disconnected": "󰤮  Disconnected",
+	"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
+},
+
+    "pulseaudio": {
+	"on-click": "pwvucontrol",
+        "format": "{icon}  {volume}%  ",
+        "format-bluetooth": "  {volume}%  ",
+        "format-muted":"婢  Mute  ",
+        "interval": 60,
+
+        "format-icons": {
+        "default": [""]
+	},
+}
+
+}
