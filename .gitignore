@@ -2,5 +2,8 @@ clipse/.config/clipse/tmp_files
 clipse/.config/clipse/clipboard_history.json
 clipse/.config/clipse/clipse.log
 
+
 fish/.config/fish/conf.d
-fish/.config/fish/fish_*
+fish_*
+# fish/.config/fish/fishd*
+fishd*

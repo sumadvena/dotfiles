@@ -12,6 +12,7 @@
 
 # VARIABLES:
 WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 # MONITORS:
 way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
@@ -19,12 +20,12 @@ way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 # STARTUP:
 riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND _DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "foot --server"
-riverctl spawn "wpaperd -d"
+riverctl spawn "$HOME/.config/river/random_wallpaper.sh"
 riverctl spawn "easyeffects --gapplication-service"
 riverctl spawn "clipse --listen"
 riverctl spawn "udiskie"
 riverctl spawn "tlp start"
-(while ~/.config/river/creek-data.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=13 -hg 28 -nb 0x100f0f -nf 0xcecdc3 -fb 0x205ea6 -ff 0xcecdc3 &
+(while ~/.config/river/creek-data.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=14 -nb 0x100f0f -nf 0xcecdc3 -fb 0x205ea6 -ff 0xcecdc3 &
 riverctl spawn "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 # TOUCHPAD:
@@ -41,7 +42,9 @@ riverctl keyboard-layout pl
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super Q spawn footclient
-riverctl map normal Super R spawn fuzzel
+riverctl map normal Super R spawn "$HOME/.config/river/run_wmenu.sh"
+riverctl map normal Super G spawn "$HOME/.config/river/run_gammastep.sh"
+riverctl map normal Super M spawn "$HOME/.config/river/play_mpv.sh"
 
 # Super+Q to close the focused view
 riverctl map normal Super C close

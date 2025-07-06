@@ -25,14 +25,14 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
-      animate = { enabled = true, opts = { duration = 1, easing = 'linear', fps = 60 } },
+      -- animate = { enabled = true, opts = { duration = 1, easing = 'linear', fps = 60 } },
       bigfile = { enabled = true },
-      dashboard = { enabled = true },
+      -- dashboard = { enabled = true },
       -- explorer = { enabled = true },
       lazygit = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
-      image = { enabled = true },
+      -- image = { enabled = true },
       picker = { enabled = true },
       -- notifier = { enabled = true },
       quickfile = { enabled = true },

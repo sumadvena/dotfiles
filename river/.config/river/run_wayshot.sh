@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-wayshot -s "$(slurp)" -f "$HOME/Obrazy/ss/ss$(date +%H-%M-%d-%m-%Y)_wayshot.png" -e png
+wayshot -s "$(slurp)" -f "$HOME/Obrazy/ss/ss$(date +%d-%m-%Y-%H-%M)_wayshot.png" -e png
