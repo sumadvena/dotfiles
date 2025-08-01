@@ -7,7 +7,7 @@ killall wbg
 counter=0
 for file in $wallpaper_path/*.jpg; do
 	if [ -f "$file" ] && [ "$counter" -eq "$random_wallpaper" ]; then
-		wbg "$file" &
+		wbg -s "$file" &
 	fi
 	((counter++))
 done

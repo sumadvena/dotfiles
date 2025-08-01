@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 amdctl -m -p0 -v 90
 amdctl -m -p1 -v 110

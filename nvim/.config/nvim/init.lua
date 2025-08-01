@@ -92,4 +92,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.opt.laststatus = 2
-vim.opt.showtabline = 2
+vim.opt.showtabline = 1
+vim.opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4

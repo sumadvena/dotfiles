@@ -1,4 +1,4 @@
-include flexoki-dark
+include ashen
 
 set selection-clipboard clipboard
 map D set "first-page-column 1:1"
@@ -6,9 +6,9 @@ map <C-d> set "first-page-column 1:2"
 
 
 # Recolor book content's color
-set recolor-lightcolor          default-bg # bg
-set recolor-darkcolor           default-fg # fg
-set recolor                     "true"
+# set recolor-lightcolor          default-bg # bg
+# set recolor-darkcolor           default-fg # fg
+# set recolor                     "true"
 set recolor-keephue             "true"                 # keep original color
 
 

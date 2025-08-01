@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This is the example configuration file for river.
 #
@@ -25,7 +25,7 @@ riverctl spawn "easyeffects --gapplication-service"
 riverctl spawn "clipse --listen"
 riverctl spawn "udiskie"
 riverctl spawn "tlp start"
-(while ~/.config/river/creek-data.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=14 -nb 0x100f0f -nf 0xcecdc3 -fb 0x205ea6 -ff 0xcecdc3 &
+(while ~/.config/river/creek-data.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=14 -nb 0x121212 -nf 0xf5f5f5 -fb 0xC4693D -ff 0xf5f5f5 &
 riverctl spawn "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 # TOUCHPAD:
@@ -43,14 +43,16 @@ riverctl keyboard-layout pl
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super Q spawn footclient
 riverctl map normal Super R spawn "$HOME/.config/river/run_wmenu.sh"
-riverctl map normal Super G spawn "$HOME/.config/river/run_gammastep.sh"
-riverctl map normal Super M spawn "$HOME/.config/river/play_mpv.sh"
+riverctl map normal Super+Shift G spawn "$HOME/.config/river/run_gammastep.sh"
+riverctl map normal Super+Shift M spawn "$HOME/.config/river/play_mpv.sh"
+riverctl map normal Super+Shift W spawn "$HOME/.config/river/run_wifi.sh"
+
 
 # Super+Q to close the focused view
 riverctl map normal Super C close
 
 # Super+Shift+E to exit river
-riverctl map normal Super+Shift M exit
+riverctl map normal Super+Shift+Control M exit
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -112,16 +114,16 @@ do
     tags=$((1 << ($i - 1)))
 
     # Super+[1-9] to focus tag [0-8]
-    riverctl map normal Super $i set-focused-tags $tags
+    riverctl map normal Super "$i" set-focused-tags "$tags"
 
     # Super+Shift+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal Super+Shift $i set-view-tags $tags
+    riverctl map normal Super+Shift "$i" set-view-tags "$tags"
 
     # Super+Control+[1-9] to toggle focus of tag [0-8]
-    riverctl map normal Super+Control $i toggle-focused-tags $tags
+    riverctl map normal Super+Control "$i" toggle-focused-tags "$tags"
 
     # Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
-    riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
+    riverctl map normal Super+Shift+Control "$i" toggle-view-tags "$tags"
 done
 
 # Super+0 to focus all tags
@@ -186,8 +188,8 @@ done
 
 # Set background and border color
 riverctl border-width 2
-riverctl border-color-focused 0x205EA6
-riverctl border-color-unfocused 0x575653
+riverctl border-color-focused 0xC4693D
+riverctl border-color-unfocused 0x323232
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300

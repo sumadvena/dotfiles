@@ -1,20 +1,30 @@
 set -gx EDITOR nvim
 set -gx MANPAGER "nvim +Man!"
 set -U fish_greeting
-starship init fish | source
 zoxide init fish | source
-fish_config theme choose flexoki-dark
-set -Ux FZF_DEFAULT_OPTS '
-	--color=fg:#878580,bg:#100F0F,hl:#CECDC3
-	--color=fg+:#878580,bg+:#1C1B1A,hl+:#CECDC3
-	--color=border:#AF3029,header:#CECDC3,gutter:#100F0F
-	--color=spinner:#24837B,info:#24837B,separator:#282726
-	--color=pointer:#AD8301,marker:#AF3029,prompt:#AD8301'
+
+set -g fish_key_bindings fish_vi_key_bindings
+
+export FZF_DEFAULT_OPTS="
+  $FZF_DEFAULT_OPTS
+	--color=fg:#a7a7a7
+	--color=fg+:#d5d5d5
+	--color=bg:#121212
+	--color=bg+:#323232
+	--color=hl:#C4693D
+	--color=hl+:#E49A44
+	--color=info:#a7a7a7
+	--color=marker:#C4693D
+	--color=prompt:#C4693D
+	--color=spinner:#D87C4A
+	--color=pointer:#E5A72A
+	--color=header:#B14242
+	--color=border:#a7a7a7
+	--color=query:#d5d5d5
+	--color=gutter:#121212"
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-
-# awrit
-set --export PATH /home/matt/.local/bin $PATH
 
 alias cd="z"

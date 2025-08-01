@@ -3,6 +3,6 @@
 #
 
 [options]
-background = 100F0F
-overlay_text_color = CECDC3
-overlay_background_color = 1C1B1A
+background = 121212
+overlay_text_color = f5f5f5
+overlay_background_color = e5e5e5
