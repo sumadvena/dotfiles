@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mpv --ytdl-format="bestvideo[ext=mp4][height<=?1080]+bestaudio[ext=m4a]" "$(wl-paste)"
+mpv --ytdl-format="bestvideo[height<=1080][ext=mp4][vcodec^=avc]+bestaudio[ext=m4a]/best[ext=mp4]/best" "$(wl-paste)"

@@ -1,0 +1,63 @@
+PipeWire 'pipewire-0' [1.4.7, matt@tpad, cookie:2901026502]
+ └─ Clients:
+        32. pipewire                            [1.4.7, matt@tpad, pid:1728]
+        33. WirePlumber                         [1.4.7, matt@tpad, pid:1727]
+        46. WirePlumber [export]                [1.4.7, matt@tpad, pid:1727]
+       133. xdg-desktop-portal                  [1.4.7, matt@tpad, pid:2058]
+       134. xdg-desktop-portal-hyprland         [1.4.7, matt@tpad, pid:2170]
+       135. easyeffects                         [1.4.7, matt@tpad, pid:1878]
+       197. wpctl                               [1.4.7, matt@tpad, pid:35047]
+
+Audio
+ ├─ Devices:
+ │      47. Renoir/Cezanne HDMI/DP Audio Controller [alsa]
+ │      48. ThinkPad Dock USB Audio             [alsa]
+ │      49. Webcam C270                         [alsa]
+ │      50. Family 17h/19h/1ah HD Audio Controller [alsa]
+ │  
+ ├─ Sinks:
+ │  *   34. ThinkPad Dock USB Audio Analogowe stereo [vol: 0.93]
+ │      51. Renoir/Cezanne HDMI/DP Audio Controller Pro [vol: 1.00]
+ │      58. Renoir/Cezanne HDMI/DP Audio Controller Pro 7 [vol: 1.00]
+ │      59. Renoir/Cezanne HDMI/DP Audio Controller Pro 8 [vol: 1.00]
+ │      67. Family 17h/19h/1ah HD Audio Controller Speaker [vol: 0.38]
+ │     136. Easy Effects Sink                   [vol: 1.00]
+ │  
+ ├─ Sources:
+ │      45. ThinkPad Dock USB Audio Analogowe stereo [vol: 1.00]
+ │      66. Webcam C270 Mono                    [vol: 1.00]
+ │      68. Family 17h/19h/1ah HD Audio Controller Stereo Microphone [vol: 1.00]
+ │  *   69. Family 17h/19h/1ah HD Audio Controller Digital Microphone [vol: 1.00]
+ │     137. Easy Effects Source                 [vol: 1.00]
+ │  
+ ├─ Filters:
+ │  
+ └─ Streams:
+
+Video
+ ├─ Devices:
+ │      42. C270 HD WEBCAM                      [libcamera]
+ │      43. Integrated Camera: Integrated C     [libcamera]
+ │      44. Integrated Camera: Integrated I     [libcamera]
+ │      60. Integrated Camera                   [v4l2]
+ │      61. Integrated Camera                   [v4l2]
+ │      62. Integrated Camera                   [v4l2]
+ │      63. Integrated Camera                   [v4l2]
+ │      64. C270 HD WEBCAM                      [v4l2]
+ │      65. C270 HD WEBCAM                      [v4l2]
+ │  
+ ├─ Sinks:
+ │  
+ ├─ Sources:
+ │  *  199. Integrated Camera (V4L2)           
+ │     201. Integrated Camera (V4L2)           
+ │     203. C270 HD WEBCAM (V4L2)              
+ │  
+ ├─ Filters:
+ │  
+ └─ Streams:
+
+Settings
+ └─ Default Configured Devices:
+         0. Audio/Sink    alsa_output.usb-Generic_ThinkPad_Dock_USB_Audio-00.analog-stereo
+         1. Audio/Source  alsa_input.pci-0000_07_00.6.HiFi__Mic1__source

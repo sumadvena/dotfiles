@@ -12,20 +12,26 @@
 
 # VARIABLES:
 WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
-export QT_QPA_PLATFORMTHEME=qt6ct
+
 
 # MONITORS:
 way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 
 # STARTUP:
-riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND _DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "dbus-update-activation-environment SEATD_SOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+
+riverctl spawn "export QT_QPA_PLATFORMTHEME=qt6ct"
+riverctl spawn "export SDL_VIDEODRIVER=wayland"
+riverctl spawn "export CLUTTER_BACKEND=wayland"
+riverctl spawn "export QT_WAYLAND_DISABLE_WINDOWDECORATION=1"
+
 riverctl spawn "foot --server"
 riverctl spawn "$HOME/.config/river/random_wallpaper.sh"
 riverctl spawn "easyeffects --gapplication-service"
 riverctl spawn "clipse --listen"
 riverctl spawn "udiskie"
 riverctl spawn "tlp start"
-(while ~/.config/river/creek-data.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=14 -nb 0x121212 -nf 0xf5f5f5 -fb 0xC4693D -ff 0xf5f5f5 &
+(while ~/.config/river/bar-status.sh; do sleep 1; done) | creek -fn "CommitMono Nerd Font":size=14 -nb 0x121212 -nf 0xf5f5f5 -fb 0xB14242 -ff 0xf5f5f5 &
 riverctl spawn "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 # TOUCHPAD:
@@ -140,11 +146,11 @@ riverctl map normal Super F toggle-fullscreen
 
 
 # SCREENSHOTS
-riverctl map normal Super P spawn ~/.config/river/run_wayshot.sh
-riverctl map normal None Print spawn ~/.config/river/run_wayshot.sh
+riverctl map normal Super P spawn "$HOME/.config/river/run_ss.sh"
+riverctl map normal None Print spawn "$HOME/.config/river/run_ss.sh"
 
 # CLIPBOARD
-riverctl map normal Super+Shift H spawn "footclient -T clipse clipse"
+riverctl map normal Super+Control H spawn "footclient -T clipse clipse"
 
 # Super+{Up,Right,Down,Left} to change layout orientation
 riverctl map normal Super Up    send-layout-cmd rivertile "main-location top"
@@ -188,8 +194,8 @@ done
 
 # Set background and border color
 riverctl border-width 2
-riverctl border-color-focused 0xC4693D
-riverctl border-color-unfocused 0x323232
+riverctl border-color-focused 0xB14242
+riverctl border-color-unfocused 0x949494
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300

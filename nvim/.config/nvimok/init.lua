@@ -1,14 +1,19 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+require("config.lazy")
+
 -- Native file explorer
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.g.have_nerd_font = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
+-- Don't show the mode, since it's already in the status line
+vim.opt.showmode = false
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 vim.schedule(function()
@@ -38,6 +43,10 @@ vim.opt.timeoutlen = 300
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -85,38 +94,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.opt.laststatus = 2
 vim.opt.showtabline = 1
 vim.opt.smartindent = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
 vim.opt.winborder = "rounded"
-
-
-vim.pack.add({
-	{ src = "https://codeberg.org/ficd/ashen.nvim" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
-	{ src = "https://github.com/echasnovski/mini.pick" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
-	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
-	{ src = 'https://github.com/neovim/nvim-lspconfig' },
-	{ src = "https://github.com/mason-org/mason.nvim" },
-	{ src = "https://github.com/y3owk1n/time-machine.nvim" },
-	-- { src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" }
-})
-
-require "mason".setup()
-require "mini.pick".setup()
-require "oil".setup()
-
-vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
-vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
-vim.keymap.set('n', '<leader>e', ":Oil<CR>")
-vim.keymap.set('n', '<leader>tt', ":TimeMachineToggle<CR>")
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-
-vim.lsp.enable({ "lua_ls", "clangd", "clang-format", "tinymist", "typstyle", "zls", "ruff", "pyright" })
-
--- colors
-require "ashen".setup({
-	style_presets = { bold_functions = true, italic_comments = true }
-})
-vim.cmd("colorscheme ashen")
