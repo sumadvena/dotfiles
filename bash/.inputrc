@@ -1,6 +1,16 @@
+$include /etc/inputrc
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 5
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
+
 set editing-mode vi
 set keymap vi-insert
 set show-mode-in-prompt on
-set vi-ins-mode-string "+ "
-set vi-cmd-mode-string ": "
 

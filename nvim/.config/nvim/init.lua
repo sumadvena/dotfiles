@@ -20,6 +20,7 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand("~/.vimundodir") -- Set custom undo directory
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -99,8 +100,7 @@ vim.pack.add({
 	{ src = "https://github.com/chomosuke/typst-preview.nvim" },
 	{ src = 'https://github.com/neovim/nvim-lspconfig' },
 	{ src = "https://github.com/mason-org/mason.nvim" },
-	{ src = "https://github.com/y3owk1n/time-machine.nvim" },
-	-- { src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" }
+	{ src = "https://github.com/mbbill/undotree" },
 })
 
 require "mason".setup()
@@ -110,13 +110,27 @@ require "oil".setup()
 vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
 vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
 vim.keymap.set('n', '<leader>e', ":Oil<CR>")
-vim.keymap.set('n', '<leader>tt', ":TimeMachineToggle<CR>")
+vim.keymap.set('n', '<leader>tt', vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.lsp.enable({ "lua_ls", "clangd", "clang-format", "tinymist", "typstyle", "zls", "ruff", "pyright" })
+vim.lsp.enable({ "lua_ls",
+	"fennells",
+	"clangd",
+	"clang-format",
+	"tinymist",
+	"typstyle",
+	"zls",
+	"ruff",
+	"pyright",
+	"ocamllsp",
+})
 
 -- colors
 require "ashen".setup({
-	style_presets = { bold_functions = true, italic_comments = true }
+	style_presets = {
+		bold_functions = true,
+		italic_comments = true
+	}
 })
+
 vim.cmd("colorscheme ashen")

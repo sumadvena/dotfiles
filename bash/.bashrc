@@ -28,4 +28,6 @@ export FZF_DEFAULT_OPTS="
 	--color=query:#d5d5d5
 	--color=gutter:#121212"
 
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[2m\]${PS1_CMD1}\[\e[0m\] \[\e[92;1m\]\w\[\e[0m\] \[\e[1m\]\$\[\e[0m\] '
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1=' \[\e[2m\]${PS1_CMD1}\[\e[0m\] \[\e[92;1m\]\w\[\e[0m\] \[\e[1m\]\$\[\e[0m\] '
+
+test -r '/home/matt/.opam/opam-init/init.sh' && . '/home/matt/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
